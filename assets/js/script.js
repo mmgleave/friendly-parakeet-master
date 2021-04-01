@@ -1,3 +1,4 @@
+// generate password function
 function generatePassword() {
   // user length prompt
   var userLength = prompt("Please enter the number of characters needed (8-128):");
@@ -55,12 +56,15 @@ function generatePassword() {
   var passwordString = lowerCaseString + upperCaseString + numericString + specialString;
   console.log(passwordString);
 
+  // create empty variable for password
   var newPassword = "";
 
   // for loop to create password
   for (var i = 0; i < userLength; i += 1){
     newPassword += passwordString[Math.floor(Math.random() * userLength)];
   }
+
+  // result
   console.log(newPassword);
   return(newPassword);
 };
@@ -74,7 +78,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
