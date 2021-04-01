@@ -40,6 +40,17 @@ function generatePassword() {
   };
   console.log(specialString);
 
+  if (
+    !userLowerCase && 
+    !userUpperCase && 
+    !userNumericChar && 
+    !userSpecialChar) 
+    {
+      alert("You must choose at least one valid character set. Please try again.");
+      generatePassword();
+  } else {console.log("working");
+  }
+
   // create password characters array
   var passwordString = lowerCaseString + upperCaseString + numericString + specialString;
   console.log(passwordString);
