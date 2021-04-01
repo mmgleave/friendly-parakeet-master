@@ -59,7 +59,7 @@ function generatePassword() {
 
   // for loop to create password
   for (var i = 0; i < userLength; i += 1){
-    newPassword += passwordString[Math.floor(Math.random() * passwordString.length)];
+    newPassword += passwordString[Math.floor(Math.random() * userLength)];
   }
   console.log(newPassword);
   return(newPassword);
